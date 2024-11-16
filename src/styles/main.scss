@@ -1,0 +1,308 @@
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-secondary;
+  transition: background-color $transition-speed;
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Profile Section
+.profile {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: $accent-color;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 3px solid $accent-color;
+    padding: 5px;
+  }
+
+  .profile-content {
+    h1 {
+      font-family: $font-primary;
+      font-size: 2rem;
+      margin: 0 0 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $secondary-color;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+  }
+}
+
+// Cards Grid
+.cards-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin: 2rem 0;
+
+  @include responsive(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Card Component
+.card {
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 2rem;
+  @include card-shadow;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: $accent-color;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    &::before {
+      transform: scaleY(1);
+    }
+  }
+
+  h3 {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem;
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    color: $secondary-color;
+    line-height: 1.8;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: $accent-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all $transition-speed;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      transform: translateY(-2px);
+    }
+
+    &.outline {
+      background-color: transparent;
+      border: 2px solid $accent-color;
+      color: $accent-color;
+
+      &:hover {
+        background-color: $accent-color;
+        color: white;
+      }
+    }
+  }
+  .code-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  
+    code {
+      font-size: 1rem;
+      background-color: $light-bg;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: $primary-color;
+      border: 1px solid lighten($accent-color, 20%);
+    }
+  
+    .button {
+      &.copied {
+        background-color: lighten($accent-color, 10%);
+        color: $dark-bg;
+      }
+    }
+  }
+  
+  .instructions-container {
+    margin-top: 1.5rem;
+  
+    .accordion-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: none;
+      color: $accent-color;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        color: darken($accent-color, 10%);
+      }
+  
+      &.open {
+        color: $primary-color;
+      }
+    }
+  
+    .instructions-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+  
+      li {
+        margin-bottom: 0.5rem;
+  
+        .instruction-link {
+          text-decoration: none;
+          color: $accent-color;
+          font-weight: 400;
+  
+          &:hover {
+            text-decoration: underline;
+            color: darken($accent-color, 10%);
+          }
+        }
+  
+        .instruction-text {
+          font-size: 1rem;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  
+}
+
+// Scroll to Top Button
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $accent-color;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+// Toggle Dark Mode Button
+.toggle-dark-mode {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  background-color: $accent-color;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+// Footer
+.footer {
+  margin-top: auto;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: $secondary-color;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  p {
+    margin: 0.5rem 0;
+    line-height: 1.8;
+  }
+}
+
