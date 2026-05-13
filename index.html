@@ -12,15 +12,15 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FDFBF7; /* Warm Beige */
-            color: #334155; /* Slate Gray */
+            background-color: #FDFBF7;
+            color: #334155;
         }
         .nav-link {
             transition: color 0.3s, border-bottom-color 0.3s;
             border-bottom: 2px solid transparent;
         }
         .nav-link:hover, .nav-link.active {
-            color: #3B82F6; /* Soft Blue Accent */
+            color: #3B82F6;
             border-bottom-color: #3B82F6;
         }
         .timeline-item::before {
@@ -48,20 +48,28 @@
                 height: 350px;
             }
         }
+        .sub-section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin-top: 0.85rem;
+            margin-bottom: 0.35rem;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-slate-800">
-                Mathan Kumar
-            </div>
+            <div class="text-2xl font-bold text-slate-800">Mathan Kumar</div>
             <div class="hidden md:flex space-x-8">
                 <a href="#journey" class="nav-link font-medium pb-1">Career Journey</a>
                 <a href="#skills" class="nav-link font-medium pb-1">Skills</a>
                 <a href="#achievements" class="nav-link font-medium pb-1">Achievements</a>
                 <a href="#projects" class="nav-link font-medium pb-1">Projects</a>
+                <a href="#certifications" class="nav-link font-medium pb-1">Certifications</a>
                 <a href="#contact" class="nav-link font-medium pb-1">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md">
@@ -73,11 +81,13 @@
             <a href="#skills" class="block py-2 nav-link">Skills</a>
             <a href="#achievements" class="block py-2 nav-link">Achievements</a>
             <a href="#projects" class="block py-2 nav-link">Projects</a>
+            <a href="#certifications" class="block py-2 nav-link">Certifications</a>
             <a href="#contact" class="block py-2 nav-link">Contact</a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
+
         <section id="hero" class="text-center mb-24">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Senior Full-Stack Developer & Engineering Leader</h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-600">
@@ -88,61 +98,82 @@
         <section id="journey" class="mb-24">
             <h2 class="text-3xl font-bold text-center mb-12">Career Journey</h2>
             <div class="relative border-l-2 border-slate-200 ml-12 pl-12">
-                
+
+                <!-- Hastings Direct -->
                 <div class="mb-12 timeline-item">
                     <h3 class="text-xl font-semibold text-blue-600">Senior Digital Developer & Line Manager</h3>
-                    <p class="font-medium text-slate-700">Hastings Direct | May 2020 – Present</p>
-                    <div class="mt-2 text-slate-600 space-y-2">
-                        <p>Lead developer driving digital transformation across QuoteHub microservices modernization, customer-facing claims innovation, scalable Guidewire integrations, and team leadership.</p>
-                        <ul class="list-disc list-inside">                            
-                            <li>Leading the QuoteHub microservices transformation, modernizing the Guidewire aggregator instance with widely adopted technologies on Spring Boot and Azure Kubernetes Service (AKS).</li>
-                            <li>Architected a self-service digital claims portal using React.js, significantly reducing call volume and operational costs.</li>
-                            <li>Engineered scalable integrations between the React front-end and Guidewire back-end systems using Azure APIM.</li>
-                            <li>Serve as a line manager for 3 direct reports, providing coaching and career development.</li>
-                        </ul>
-                    </div>
+                    <p class="font-medium text-slate-700">Hastings Direct &nbsp;·&nbsp; May 2020 – Present &nbsp;·&nbsp; UK</p>
+                    <p class="mt-2 text-slate-600">Full stack engineer and engineering lead at a UK digital insurance carrier — building scalable backend services, customer-facing platforms, and high-throughput data integrations across distributed systems.</p>
+
+                    <p class="sub-section-label">Full Stack Platform</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Architected and delivered a React.js self-service claims platform end-to-end — component design, state management, API integration, and test coverage (Jest, RTL).</li>
+                        <li>Built scalable backend integrations via Azure API Management (APIM), enabling reliable data exchange between internal systems and third-party services.</li>
+                        <li>Designed reusable, modular frontend components with a focus on accessibility across diverse customer segments.</li>
+                    </ul>
+
+                    <p class="sub-section-label">Microservices — Quote Hub</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Worked on the implementation of a monolithic quote system into parallelised Spring Boot microservices, cutting end-to-end latency ~73% (8.2s → 2.2s).</li>
+                        <li>Implemented concurrent service orchestration using Java CompletableFuture for parallel downstream API calls.</li>
+                        <li>Designed robust integration patterns with external aggregator APIs — retry logic, timeout handling, and graceful degradation for resilience at scale.</li>
+                        <li>Built dedicated search &amp; retrieve microservices with purpose-built datastores, applying optimal data structure choices to query performance.</li>
+                        <li>Mentored engineers on algorithmic problem-solving, clean code practices, and structuring backend logic for scalability and testability.</li>
+                    </ul>
+
+                    <p class="sub-section-label">Leadership</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Line manager for 3 direct reports; recognised as <span class="font-semibold text-slate-700">Best Leader Q1 2025</span>, fostering a culture of technical rigour and continuous learning.</li>
+                        <li>Conducted design reviews and code reviews to uphold engineering standards across the team.</li>
+                    </ul>
                 </div>
 
+                <!-- LV= -->
                 <div class="mb-12 timeline-item">
                     <h3 class="text-xl font-semibold text-blue-600">Guidewire Consultant</h3>
-                    <p class="font-medium text-slate-700">LV= (Contractor) | November 2019 – May 2020</p>
-                    <div class="mt-2 text-slate-600 space-y-2">
-                        <p>Contracted as a Guidewire specialist to assist one of the UK's largest insurers with critical system integrations and API development.</p>
-                        <ul class="list-disc list-inside">
-                            <li>Integrated Guidewire PolicyCenter with aggregator platforms by exposing policy service APIs.</li>
-                            <li>Implemented end-to-end integration solutions between PolicyCenter and BillingCenter.</li>
-                            <li>Delivered scalable API solutions to streamline policy and billing workflows for high-volume operations.</li>
-                        </ul>
-                    </div>
+                    <p class="font-medium text-slate-700">LV= (Contractor) &nbsp;·&nbsp; November 2019 – May 2020 &nbsp;·&nbsp; London, UK</p>
+                    <p class="mt-2 text-slate-600">Contracted as a specialist integration engineer at one of the UK's largest insurers, delivering full stack data integration solutions across core insurance platforms.</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1 mt-2">
+                        <li>Designed and built API integrations (REST and SOAP) between core policy management systems and external aggregator platforms, handling complex data transformation and business rule enforcement.</li>
+                        <li>Implemented end-to-end integrations across billing and policy systems, writing well-structured, maintainable backend code in Java and Gosu.</li>
+                        <li>Produced technical documentation covering data flows, API contracts, and system interactions to support ongoing development and onboarding.</li>
+                    </ul>
                 </div>
 
+                <!-- EY -->
                 <div class="mb-12 timeline-item">
                     <h3 class="text-xl font-semibold text-blue-600">Technical Lead</h3>
-                    <p class="font-medium text-slate-700">EY | November 2014 – November 2019</p>
+                    <p class="font-medium text-slate-700">EY (Ernst &amp; Young) &nbsp;·&nbsp; November 2014 – November 2019 &nbsp;·&nbsp; London, UK &amp; India</p>
+                    <p class="mt-2 text-slate-600">Led a team of 4–6 engineers delivering full-cycle software implementations for global P&amp;C insurance clients across the UK and USA markets.</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1 mt-2">
+                        <li>Designed and built backend integrations for FNOL processing, payment handling, and large-scale file-based data exchange — ensuring alignment with compliance and operational requirements.</li>
+                        <li>Applied data structures and algorithmic thinking to design efficient data transformation pipelines handling high-volume insurance transaction data.</li>
+                        <li>Acted as primary technical contact, translating business requirements into well-structured, scalable software components across the full stack.</li>
+                        <li>Drove code quality through regular reviews, pair programming, and hands-on mentoring — raising engineering standards across offshore delivery teams.</li>
+                    </ul>
+                </div>
+
+                <!-- IGATE -->
+                <div class="mb-12 timeline-item">
+                    <h3 class="text-xl font-semibold text-blue-600">Senior Software Engineer</h3>
+                    <p class="font-medium text-slate-700">IGATE &nbsp;·&nbsp; January 2014 – November 2014 &nbsp;·&nbsp; India</p>
                     <div class="mt-2 text-slate-600 space-y-2">
-                        <p>Led a team of 4-6 offshore developers in the full-cycle implementation of Guidewire solutions for global P&C insurance clients.</p>
-                        <ul class="list-disc list-inside">
-                            <li>Directed the technical design of critical Guidewire integrations for FNOL and payment processing.</li>
-                            <li>Served as the primary technical point of contact for clients, translating business needs into technical specifications.</li>
+                        <p>Developed enterprise web applications using Spring MVC, Hibernate, and PL/SQL, and implemented cloud storage solutions with AWS S3.</p>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Implemented backend business logic and RESTful APIs consumed by front-end web interfaces.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="mb-12 timeline-item">
-                    <h3 class="text-xl font-semibold text-blue-600">Senior Software Engineer</h3>
-                    <p class="font-medium text-slate-700">IGATE | January 2014 – November 2014</p>
-                     <div class="mt-2 text-slate-600 space-y-2">
-                        <p>Developed and maintained enterprise web applications using Spring MVC, Hibernate, and PL/SQL, and implemented solutions involving cloud storage with AWS S3.</p>
-                    </div>
-                </div>
-                
+                <!-- Tech Mahindra -->
                 <div class="timeline-item">
                     <h3 class="text-xl font-semibold text-blue-600">Software Engineer</h3>
-                    <p class="font-medium text-slate-700">Tech Mahindra | June 2011 – December 2013</p>
-                    <div class="mt-2 text-slate-600 space-y-2">
-                       <p>Contributed to the development and maintenance of Java-based applications for telecom clients, gaining foundational experience in the full software development lifecycle.</p>
+                    <p class="font-medium text-slate-700">Tech Mahindra &nbsp;·&nbsp; June 2011 – December 2013 &nbsp;·&nbsp; India</p>
+                    <div class="mt-2 text-slate-600">
+                        <p>Built and maintained Java-based backend applications for telecom clients, developing core competencies in object-oriented design, data structures, and SDLC practices.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -170,7 +201,7 @@
                     <h3 class="font-semibold text-lg mb-2">Frontend</h3>
                     <ul class="list-disc list-inside text-slate-600">
                         <li>React.js</li>
-                        <li>JavaScript (ES6+)</li>
+                        <li>JavaScript (ES6+), TypeScript</li>
                         <li>Styled-components, CSS-in-JS</li>
                         <li>Jest, React Testing Library</li>
                     </ul>
@@ -178,9 +209,10 @@
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
                     <h3 class="font-semibold text-lg mb-2">Backend & Frameworks</h3>
                     <ul class="list-disc list-inside text-slate-600">
-                        <li>Spring Microservices</li>
-                        <li>Spring Boot</li>
-                        <li>Java</li>
+                        <li>Spring Boot, Spring MVC</li>
+                        <li>Microservices, CompletableFuture</li>
+                        <li>Java 8+, Python</li>
+                        <li>FastAPI</li>
                     </ul>
                 </div>
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="guidewire">
@@ -194,23 +226,24 @@
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
                     <h3 class="font-semibold text-lg mb-2">Cloud & DevOps</h3>
                     <ul class="list-disc list-inside text-slate-600">
-                        <li>Microsoft Azure</li>
-                        <li>Docker, GitHub Actions (Personal Projects)</li>
-                        <li>Linux</li>
+                        <li>Microsoft Azure, Azure APIM</li>
+                        <li>Docker, CI/CD Pipelines</li>
+                        <li>PM2, Nginx, Linux</li>
                     </ul>
                 </div>
-                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
-                    <h3 class="font-semibold text-lg mb-2">APIs & Tools</h3>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
+                    <h3 class="font-semibold text-lg mb-2">APIs & Data</h3>
                     <ul class="list-disc list-inside text-slate-600">
                         <li>REST, SOAP, JSON</li>
-                        <li>Azure API Management (APIM)</li>
+                        <li>PostgreSQL, SQL Server, Redis</li>
+                        <li>Node.js, Express, SSE</li>
                         <li>Git, JIRA, Postman</li>
                     </ul>
                 </div>
             </div>
-             <div class="mt-12">
+            <div class="mt-12">
                 <h3 class="text-2xl font-bold text-center mb-4">Technology Application</h3>
-                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">My work spans modern React front-end delivery and cloud-native backend engineering, including QuoteHub microservices modernization on Spring Boot and Azure Kubernetes Service (AKS), alongside deep Guidewire integration expertise.</p>
+                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">My work spans modern React front-end delivery and cloud-native backend engineering, including QuoteHub microservices modernization on Spring Boot and AKS, alongside deep Guidewire integration expertise.</p>
                 <div class="chart-container">
                     <canvas id="skillsChart"></canvas>
                 </div>
@@ -231,9 +264,14 @@
                     <p class="text-slate-600">Successfully architected and delivered a customer-centric claims portal that digitized the entire claims lifecycle, leading to significant reductions in operational costs and call center volume.</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Quote Hub Latency Reduction</h3>
+                    <p class="text-slate-500 mb-4">Microservices Transformation at Hastings Direct</p>
+                    <p class="text-slate-600">Contributed to the implementation of the monolithic quote platform's transformation into parallelised Spring Boot microservices, cutting end-to-end response time by ~73% — from 8.2 seconds to 2.2 seconds — through concurrent service orchestration and purpose-built datastores.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">Dynamic Payment Plan Implementation</h3>
                     <p class="text-slate-500 mb-4">Innovation Initiative at Hastings Direct</p>
-                    <p class="text-slate-600">Implemented a dynamic payment plan system using the Earnix rating engine, one of the first features designed to attract good drivers by offering personalized payment plans based on their financial circumstances. The project involved enriching data sources, integrating with the rating engine, selecting optimal payment plans, and configuring billing accounts.</p>
+                    <p class="text-slate-600">Implemented a dynamic payment plan system using the Earnix rating engine — one of the first features designed to offer personalized payment plans based on a driver's financial circumstances, involving data enrichment, rating engine integration, and billing account configuration.</p>
                 </div>
             </div>
         </section>
@@ -241,49 +279,111 @@
         <section id="projects" class="mb-24">
             <h2 class="text-3xl font-bold text-center mb-12">Personal Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Spring Boot & Docker Password Manager</h3>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">Trade Analytics Platform</h3>
+                        <span class="text-xs bg-emerald-100 text-emerald-700 font-medium px-2 py-0.5 rounded-full">Full Stack</span>
+                    </div>
+                    <p class="text-slate-600 mb-4 flex-grow">A full stack trading analytics app with a FastAPI backend, React/Vite frontend, and PostgreSQL. Features a hybrid REST/RPC API pattern, real-time chart endpoints streaming binary PNG, and a strict smart/dumb component architecture with React Context and custom hooks.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">FastAPI</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Vite</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Python</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">MCP Server & AI App</h3>
+                        <span class="text-xs bg-purple-100 text-purple-700 font-medium px-2 py-0.5 rounded-full">AI / LLM</span>
+                    </div>
+                    <p class="text-slate-600 mb-4 flex-grow">A Model Context Protocol (MCP) server and browser-based AI application built with Express and OpenRouter, using SSE streaming against a PostgreSQL database. Deployed and managed with PM2 and systemd for production persistence.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Express</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">SSE</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">OpenRouter</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">PM2</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">Spring Boot & Docker Password Manager</h3>
+                    </div>
                     <p class="text-slate-600 mb-4 flex-grow">A backend service for managing passwords, containerized with Docker for easy deployment and scalability.</p>
                     <div class="mt-auto">
                         <a href="https://github.com/gmathankumar/passwordmanager" target="_blank" class="inline-block bg-slate-800 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors">View on GitHub</a>
                     </div>
                 </div>
+
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Full-Stack Personal Data Manager</h3>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">Full-Stack Personal Data Manager</h3>
+                    </div>
                     <p class="text-slate-600 mb-4 flex-grow">A full-stack application built with React, TypeScript, and Supabase to securely manage personal data like passwords and gift cards.</p>
                     <div class="mt-auto">
                         <a href="https://gmkpass.netlify.app/" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-colors">Live Demo</a>
                     </div>
                 </div>
+
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">File Sorter Utility</h3>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">File Sorter Utility</h3>
+                    </div>
                     <p class="text-slate-600 mb-4 flex-grow">A lightweight NPM package designed to programmatically rename and organize files within a directory based on custom criteria.</p>
                     <div class="mt-auto">
                         <a href="https://www.npmjs.com/package/file-sorter-utility" target="_blank" class="inline-block bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500 transition-colors">View on NPM</a>
                     </div>
                 </div>
+
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Octane Runner (NPM)</h3>
-                    <p class="text-slate-600 mb-4">Snippet from package details:</p>
-                    <ul class="list-disc list-inside text-slate-600 mb-6 space-y-1 flex-grow">
-                        <li><span class="font-medium">Package:</span> octane-runner</li>
-                        <li><span class="font-medium">Registry:</span> npmjs.com</li>
-                        <li><span class="font-medium">Install:</span> npm install octane-runner</li>
-                        <li><span class="font-medium">Package URL:</span> npmjs.com/package/octane-runner</li>
-                    </ul>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">Octane Runner</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4 flex-grow">An NPM CLI tool replacing Postman's collection runner against ALM Octane, supporting <code class="text-sm bg-slate-100 px-1 rounded">--data</code> CSV mode and <code class="text-sm bg-slate-100 px-1 rounded">--commit</code> hash mode with zero runtime dependencies.</p>
                     <div class="mt-auto">
                         <a href="https://www.npmjs.com/package/octane-runner" target="_blank" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors">View on NPM</a>
                     </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="certifications" class="mb-24">
+            <h2 class="text-3xl font-bold text-center mb-12">Certifications &amp; Education</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto" role="list">
+                <div role="listitem" class="bg-white p-5 rounded-lg shadow-md flex items-start gap-3">
+                    <span class="mt-2 inline-block w-2.5 h-2.5 rounded-full bg-blue-600 flex-shrink-0" aria-hidden="true"></span>
+                    <span class="text-slate-700">Guidewire Certified Specialist – Integration</span>
+                </div>
+                <div role="listitem" class="bg-white p-5 rounded-lg shadow-md flex items-start gap-3">
+                    <span class="mt-2 inline-block w-2.5 h-2.5 rounded-full bg-blue-600 flex-shrink-0" aria-hidden="true"></span>
+                    <span class="text-slate-700">Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                </div>
+                <div role="listitem" class="bg-white p-5 rounded-lg shadow-md flex items-start gap-3">
+                    <span class="mt-2 inline-block w-2.5 h-2.5 rounded-full bg-blue-600 flex-shrink-0" aria-hidden="true"></span>
+                    <span class="text-slate-700">Docker Foundations Professional Certificate</span>
+                </div>
+                <div role="listitem" class="bg-white p-5 rounded-lg shadow-md flex items-start gap-3">
+                    <span class="mt-2 inline-block w-2.5 h-2.5 rounded-full bg-blue-600 flex-shrink-0" aria-hidden="true"></span>
+                    <span class="text-slate-700">Kotlin &amp; Android Certifications</span>
+                </div>
+                <div role="listitem" class="bg-white p-5 rounded-lg shadow-md flex items-start gap-3 sm:col-span-2 lg:col-span-1">
+                    <span class="mt-2 inline-block w-2.5 h-2.5 rounded-full bg-blue-600 flex-shrink-0" aria-hidden="true"></span>
+                    <span class="text-slate-700">B.Tech in Information Technology — Anna University</span>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="text-center bg-white py-16 rounded-lg shadow-md">
-             <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
-             <p class="text-slate-600 mb-8 max-w-xl mx-auto">I'm always open to discussing new opportunities and challenges in digital transformation and software development.</p>
-             
-             <!-- Download Resume Button -->
-             <div class="mb-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">I'm always open to discussing new opportunities and challenges in digital transformation and software development.</p>
+
+            <div class="mb-8 flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a href="./assets/Mathan_Kumar_Resume.pdf" target="_blank" download="Mathan_Kumar_Resume.pdf" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-300 inline-flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -296,15 +396,15 @@
                     </svg>
                     Download Resume (DOCX)
                 </a>
-             </div>
+            </div>
 
-             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
                 <a href="mailto:dev@gmathankumar.uk" class="text-blue-600 hover:underline">dev@gmathankumar.uk</a>
                 <span class="hidden md:block text-slate-300">|</span>
                 <a href="https://linkedin.com/in/gmathankumar" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/gmathankumar</a>
                 <span class="hidden md:block text-slate-300">|</span>
                 <a href="https://github.com/gmathankumar" target="_blank" class="text-blue-600 hover:underline">github.com/gmathankumar</a>
-             </div>
+            </div>
         </section>
 
     </main>
@@ -323,8 +423,8 @@
 
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    if (mobileMenu.classList.contains('hidden') === false) {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                 });
@@ -336,20 +436,14 @@
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const filter = button.dataset.filter;
-
                     filterButtons.forEach(btn => {
                         btn.classList.remove('active', 'bg-blue-600', 'text-white');
                         btn.classList.add('bg-white', 'text-slate-700');
                     });
                     button.classList.add('active', 'bg-blue-600', 'text-white');
                     button.classList.remove('bg-white', 'text-slate-700');
-
                     skillCards.forEach(card => {
-                        if (filter === 'all' || card.dataset.category === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
+                        card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
                     });
                 });
             });
@@ -363,10 +457,10 @@
                         label: 'Work Focus Distribution',
                         data: [70, 15, 10, 5],
                         backgroundColor: [
-                            'rgba(59, 130, 246, 0.8)', // Blue
-                            'rgba(16, 185, 129, 0.8)', // Green
-                            'rgba(249, 115, 22, 0.8)',  // Orange
-                            'rgba(107, 114, 128, 0.8)' // Gray
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(249, 115, 22, 0.8)',
+                            'rgba(107, 114, 128, 0.8)'
                         ],
                         borderColor: '#FDFBF7',
                         borderWidth: 4
@@ -378,23 +472,14 @@
                     plugins: {
                         legend: {
                             position: 'bottom',
-                            labels: {
-                                font: {
-                                    size: 14,
-                                    family: 'Inter'
-                                }
-                            }
+                            labels: { font: { size: 14, family: 'Inter' } }
                         },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
                                     let label = context.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed !== null) {
-                                        label += context.parsed + '%';
-                                    }
+                                    if (label) label += ': ';
+                                    if (context.parsed !== null) label += context.parsed + '%';
                                     return label;
                                 }
                             }
