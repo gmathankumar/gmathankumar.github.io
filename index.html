@@ -90,14 +90,14 @@
             <div class="relative border-l-2 border-slate-200 ml-12 pl-12">
                 
                 <div class="mb-12 timeline-item">
-                    <h3 class="text-xl font-semibold text-blue-600">Senior Digital Developer & Line Manager</h3>
-                    <p class="font-medium text-slate-700">Hastings Direct | May 2020 – Present</p>
+                    <h3 class="text-xl font-semibold text-blue-600">Senior Software Engineer – Guidewire Platform Modernisation Lead</h3>
+                    <p class="font-medium text-slate-700">Hastings Direct | June 2020 – Present</p>
                     <div class="mt-2 text-slate-600 space-y-2">
-                        <p>Lead developer in a flagship digital transformation initiative with a primary focus on front-end React development and people leadership.</p>
+                        <p>Progressed from Guidewire PolicyCenter/ClaimCenter development into React front-end delivery, and now lead the modernization of Hastings Direct's quoting platform — combining hands-on engineering with people leadership.</p>
                         <ul class="list-disc list-inside">
-                            <li>Serve as a line manager for 3 direct reports, providing coaching and career development.</li>
-                            <li>Architected a self-service digital claims portal using React.js, significantly reducing call volume and operational costs.</li>
-                            <li>Engineered scalable integrations between the React front-end and Guidewire back-end systems using Azure APIM.</li>
+                            <li>Leading the migration of Guidewire's quote-orchestration logic into a Java/Spring Boot microservice, cutting quote latency by ~73%.</li>
+                            <li>Architected a self-service digital claims portal using React.js, integrating with Guidewire ClaimCenter via Azure APIM to reduce call volume and operational costs.</li>
+                            <li>Line-manage and mentor a team of engineers, providing coaching and career development.</li>
                         </ul>
                     </div>
                 </div>
@@ -168,8 +168,8 @@
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="frontend">
                     <h3 class="font-semibold text-lg mb-2">Frontend</h3>
                     <ul class="list-disc list-inside text-slate-600">
-                        <li>React.js</li>
-                        <li>JavaScript (ES6+)</li>
+                        <li>React.js, TypeScript</li>
+                        <li>Redux Toolkit</li>
                         <li>Styled-components, CSS-in-JS</li>
                         <li>Jest, React Testing Library</li>
                     </ul>
@@ -177,9 +177,9 @@
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
                     <h3 class="font-semibold text-lg mb-2">Backend & Frameworks</h3>
                     <ul class="list-disc list-inside text-slate-600">
-                        <li>Java/J2EE</li>
-                        <li>Spring MVC</li>
-                        <li>Kotlin</li>
+                        <li>Java, Spring Boot & Spring MVC</li>
+                        <li>Microservices Architecture</li>
+                        <li>JUnit 5, Mockito, JaCoCo</li>
                     </ul>
                 </div>
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="guidewire">
@@ -193,8 +193,8 @@
                 <div class="skill-card bg-white p-6 rounded-lg shadow-md" data-category="backend">
                     <h3 class="font-semibold text-lg mb-2">Cloud & DevOps</h3>
                     <ul class="list-disc list-inside text-slate-600">
-                        <li>Microsoft Azure</li>
-                        <li>Docker, GitHub Actions (Personal Projects)</li>
+                        <li>Microsoft Azure, Cloudflare</li>
+                        <li>Docker, GitHub Actions (incl. custom Actions)</li>
                         <li>AWS (S3), Linux</li>
                     </ul>
                 </div>
@@ -209,7 +209,7 @@
             </div>
              <div class="mt-12">
                 <h3 class="text-2xl font-bold text-center mb-4">Technology Application</h3>
-                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">My time is primarily focused on modern front-end development, complemented by deep expertise in Guidewire and other backend technologies.</p>
+                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">My career has centered on Guidewire and backend/platform modernization, with a substantial stretch of hands-on React development and cloud/API integration work along the way.</p>
                 <div class="chart-container">
                     <canvas id="skillsChart"></canvas>
                 </div>
@@ -241,10 +241,10 @@
             <h2 class="text-3xl font-bold text-center mb-12">Personal Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Spring Boot & Docker Password Manager</h3>
-                    <p class="text-slate-600 mb-4 flex-grow">A backend service for managing passwords, containerized with Docker for easy deployment and scalability.</p>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ShopFlow — Multi-Tenant Retail SaaS</h3>
+                    <p class="text-slate-600 mb-4 flex-grow">A multi-tenant SaaS platform enabling independent shops to sell online via their own subdomain storefront. Built with React 19, Spring Boot 3, PostgreSQL, and Cloudflare (Workers, Pages, R2).</p>
                     <div class="mt-auto">
-                        <a href="https://github.com/gmathankumar/passwordmanager" target="_blank" class="inline-block bg-slate-800 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors">View on GitHub</a>
+                        <a href="https://shopflow.uk" target="_blank" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors">Visit ShopFlow</a>
                     </div>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md flex flex-col">
@@ -338,10 +338,10 @@
             new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['React Development', 'Guidewire', 'Android & APIM', 'Leadership'],
+                    labels: ['Guidewire & Backend Engineering', 'React Development', 'Cloud & API Integrations', 'Leadership'],
                     datasets: [{
                         label: 'Work Focus Distribution',
-                        data: [70, 15, 10, 5],
+                        data: [55, 25, 12, 8],
                         backgroundColor: [
                             'rgba(59, 130, 246, 0.8)', // Blue
                             'rgba(16, 185, 129, 0.8)', // Green
